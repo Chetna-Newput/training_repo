@@ -1,5 +1,5 @@
 var limit=2,pg,strng;
-var jsonOb = {};
+var booksArr = [];
 $(document).ready( function() {
    $('a').click(function(){
      $('a').removeClass("actve");
@@ -18,16 +18,17 @@ $(document).ready( function() {
     }
 }  );
   
+  
   $('body').on("click", "button", function(){
    
-      var bookid = this.getAttribute("data-bookid");
-     for(i=0;i<jsonOb.Books.length;i++) 
-     { if(bookid==jsonOb.Books[i].ID)
+     var bookid = this.getAttribute("data-bookid");
+     for(i=0;i<booksArr.length;i++) 
+     { if(bookid==booksArr[i].ID)
         {  
-         $("#titleShow").text(jsonOb.Books[i].Title); 
-         jQuery("#modalImg").attr('src',jsonOb.Books[i].Image );
-         $("#modalDesp").text(jsonOb.Books[i].Description); 
-         $("#modalIsbn").text(jsonOb.Books[i].isbn); 
+         $("#titleShow").text(booksArr[i].Title); 
+         jQuery("#modalImg").attr('src',booksArr[i].Image );
+         $("#modalDesp").text(booksArr[i].Description); 
+         $("#modalIsbn").text(booksArr[i].isbn); 
           $("#myModal").show();
            
          
@@ -48,10 +49,11 @@ $(document).ready( function() {
 
 
 function change(str, page) {
-  if(page==1)
-   {jsonOb={};
-     }
    strng=str; pg=page;
+   if(pg==1)
+        {
+           booksArr=[]; 
+        }
   var arr=[],i,cell="",cells=["","","",""],rem;
    
    
@@ -60,33 +62,34 @@ function change(str, page) {
   console.log(str);
   pg++;
    $.getJSON(str,function(data, status) {
-     jsonOb=data;
-     limit=jsonOb.Total; 
+   
+    
+     limit=data.Total; 
      limit=Math.ceil((limit/10));
      console.log(pg)
      if(limit>=pg)
      {
-     if(jsonOb.hasOwnProperty('Books')) 
+     if(data.hasOwnProperty('Books')) 
        { 
-         for(i=0;i<jsonOb.Books.length;i++)
+         for(i=0;i<data.Books.length;i++)
            {  cell="<div id=\"addMargin\" class=\"grid\">" + 
-                     "<image src=\""+jsonOb.Books[i].Image+"\"id=\"imgId\" class=\"img-responsive img-thumbnail\">" + 
-                     "<p>Book Title :"+jsonOb.Books[i].Title+"</p>" + 
-                     "<p>"+jsonOb.Books[i].Description+"</p>" + 
-                     "<button  data-bookid=\""+jsonOb.Books[i].ID+"\">See More</button></div>";
-               
+                     "<image src=\""+data.Books[i].Image+"\"id=\"imgId\" class=\"img-responsive img-thumbnail\">" + 
+                     "<p>Book Title :"+data.Books[i].Title+"</p>" + 
+                     "<p>"+data.Books[i].Description+"</p>" + 
+                     "<button  data-bookid=\""+data.Books[i].ID+"\">See More</button></div>";
+               booksArr.push(data.Books[i]);
            
      
                rem=i%4;
                cells[rem]=cells[rem].concat(cell);
             }
-         }
+         } console.log(booksArr);
      for(i=0;i<4;i++)
-     {  if(pg==2)
+     { if(pg==2)
            document.getElementById("cn"+i).innerHTML=cells[i];
          else
-           $("#cn"+i).append(cells[i]);
-       } 
+          $("#cn"+i).append(cells[i]);
+       }
      }
      } 
    );
