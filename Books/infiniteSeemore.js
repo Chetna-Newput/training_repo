@@ -1,5 +1,7 @@
 var pg,search;
 var booksArr = [],count=[0,0,0,0];
+
+
 $(document).ready( function() {
    $('a').click(function(){
      $('a').removeClass("actve");
@@ -49,18 +51,20 @@ $(document).ready( function() {
 
 
 function change(str, page) {
-   var arr=[],i,cell="",cells=["","","",""],rem,limit; 
+   var arr=[],i,cell="",cells=["","","",""],rem,limit,template; 
   search=str; pg=page;
    if(pg==1)
         {  count=[0,0,0,0]
            booksArr=[]; 
         }
- 
+    
    
    
    str="http://it-ebooks-api.info/v1/search/".concat(str);
    str=str.concat("/page/"+page);
    pg++;
+    var template = $("#template").html();
+    Mustache.parse(template);
    $.getJSON(str,function(data, status) {
    
      limit=data.Total; 
@@ -71,12 +75,12 @@ function change(str, page) {
       if(data.hasOwnProperty('Books')) 
         { 
           for(i=0;i<data.Books.length;i++)
-            {  cell="<div class=\"grid\">" + 
-                     "<image src=\""+data.Books[i].Image+"\" class=\"imgId img-responsive\">" + 
-                     "<div class=\"des\"><h5>Book Title :"+data.Books[i].Title+"</h5>" + 
-                     "<div class=\"stat\"><p >"+data.Books[i].Description+"</p></div></div><hr class=\"noMargin\">" + 
-                     "<div class=\"row\"><button class=\"col-xs-offset-4 btn\" data-bookid=\""+data.Books[i].ID+"\">See More</button></div></div>";
-               booksArr.push(data.Books[i]);
+            {
+             
+              cell = Mustache.render(template, data.Books[i]);
+               
+             
+             booksArr.push(data.Books[i]);
            
               min= count[0];
               loc=0;

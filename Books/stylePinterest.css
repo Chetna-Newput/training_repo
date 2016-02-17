@@ -5,11 +5,13 @@
 .grid {
   width: 94%;
   border-radius: 10px;
-  background-color: #cdcdcd;
-  //border: 2px solid #ababab; 
+  margin-bottom: 15px;
+  border: 1px solid #ababab ;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #ababab;
 }
 
-#imgId {
+.imgId {
   width: 100%;
 }
 
@@ -21,8 +23,8 @@
   clear: left;
 }
 
-/* For mobile phones: */
-@media only screen  {
+
+
   .col-x-6 {width: 50%;
 }
     
@@ -45,9 +47,7 @@
   .col-4 {width: 33.33%;}
 }
   
-#addMargin {
-  padding: 2px 2px 0 2px;
-}
+
     
 .bgColor {
   background-color: #dedede; 
@@ -82,4 +82,100 @@ li {
   
 h1 {
   text-align: center; 
+}
+  
+h4 {
+   color: #ababab !important;
+   font-family: monospace !important;
+  }
+  
+h5 {
+  font-size: 1.2em !important;
+  color: #565656 !important;
+  font-family: monospace !important;
+    }  
+
+.noMargin {
+  margin-top: 0;
+  margin-bottom : 5px;
+}
+  
+.des {
+  padding-left: 10px;
+  padding-right: 10px;
+} 
+  
+.stat {
+  height : 63px;
+  overflow : hidden;
+   color: #898989;
+  
+}
+  
+.btn {
+   color: #fff;
+   margin-bottom : 5px !important;
+}  
+  
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 20px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+}
+
+
+.close {
+    color: white;
+    float: right;
+    position: relative;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #ababab;
+    color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
+}
+  
+.modalImg
+{ width:100%;
+  }
+  
+
+  
+
 }

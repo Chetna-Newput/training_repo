@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var i=1;
+      
+            $("#b"+i).data("greeting", "Hello World");
+   
+        console.log($("#b1").data("greeting"));
+  
+   
+   
+});
+</script>
+</head>
+<body>
+
+<button id="b1">Attach data to div element</button><br>
+<button id="btn2">Get data attached to div element</button>
+
+<div></div>
+
+</body>
+</html>

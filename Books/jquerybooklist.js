@@ -12,7 +12,7 @@
                      "<p>ISBN :"+jsonOb.Books[i].isbn+"</p>" + 
                      "<p>Book Title :"+jsonOb.Books[i].Title+"</p>" + 
                      "<p>"+jsonOb.Books[i].Description+"</p>" + 
-                     "</div>";
+                     "<button>See More</button></div>";
                rem=i%4;
                cells[rem]=cells[rem].concat(cell);
             }
