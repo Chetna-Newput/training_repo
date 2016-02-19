@@ -3,39 +3,41 @@
     <head>
       <title> Bookstore </title>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="stylePinterest.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-             <script src="infiniteSeemore.js"></script> 
+             <script src="objectoriented.js"></script> 
        <script type="text/javascript" src="mustache.js" ></script>
+      
+      
     </head>
-     <body onLoad="change('java',1)" >
+     <body >
        <div class="container-fluid">
          <div class="jumbotron row ">
            <h1>Book Store: Technical Section</h1>
          </div>
-         <div class="row bgColor" >
+         <div class="row bg-color" >
          <div class=" col-xs-12 col-sm-3 col-md-2" >
-           <h3 class="hAlign" >Categories:</h3>
+           <h3 class="set" >Categories:</h3>
            <ul class="list-group">
-             <li><a class="list-group-item actve" onclick="change('java',1)"> Java </a></li>
-             <li><a class="list-group-item" onclick="change('ruby',1)"> Ruby </a></li>
-             <li><a class="list-group-item" onclick="change('mysql',1)"> My SQL </a></li>
-             <li><a class="list-group-item" onclick="change('html',1)"> HTML </a></li>
-             <li><a class="list-group-item" onclick="change('css',1)"> CSS </a></li>
-             <li><a class="list-group-item" onclick="change('ajax',1)"> AJAX </a></li>
-             <li><a class="list-group-item" onclick="change('oracle',1)"> Oracle </a></li>
-             <li><a class="list-group-item" onclick="change('android',1)"> Android </a></li>
-             <li><a class="list-group-item" onclick="change('python',1)"> Python </a></li>
-             <li><a class="list-group-item" onclick="change('javascript',1)"> Java Script </a></li>
-             <li><a class="list-group-item" onclick="change('php',1)"> PHP </a></li>
+             <li><a class="list-group-item actve" data-id="java"> Java </a></li>
+             <li><a class="list-group-item" data-id="ruby"> Ruby </a></li>
+             <li><a class="list-group-item" data-id="mysql"> My SQL </a></li>
+             <li><a class="list-group-item" data-id="html"> HTML </a></li>
+             <li><a class="list-group-item" data-id="css"> CSS </a></li>
+             <li><a class="list-group-item" data-id="ajax"> AJAX </a></li>
+             <li><a class="list-group-item" data-id="oracle"> Oracle </a></li>
+             <li><a class="list-group-item" data-id="android"> Android </a></li>
+             <li><a class="list-group-item" data-id="python"> Python </a></li>
+             <li><a class="list-group-item" data-id="javascript"> Java Script </a></li>
+             <li><a class="list-group-item" data-id="php"> PHP </a></li>
             </ul>    
            </div>
            <div class="col-sm-9 col-md-10">
-             <h3 class="contentCenter" >List of Books:</h3>
+             <h3 class="content-center" >List of Books:</h3>
                <div class="col-x-6 col-m-4 col-3 cn0">
                </div>
                <div class=" col-x-6 col-m-4 col-3 cn1">
@@ -56,12 +58,12 @@
     <div class="row modal-body">
       
         <div class="col-sm-6 col-md-4">
-          <img class="modalImg img-responsive" >
+          <img class="modal-img img-responsive" >
         </div>  
         <div class="col-sm-6 col-md-8" >
-          <h4>Desprition :</h4>
+          <h4 class="style-h4" >Desprition :</h4>
           <p class="modalDesp"> </p><br><br>
-          <h4>ISBN :</h4>
+          <h4 class="style-h4" >ISBN :</h4>
           <p class="modalIsbn"></p>
         </div>
       
@@ -74,20 +76,24 @@
                
                 
                  <div class="grid">
-                     <image src="{{ Image }}" class="imgId img-responsive">
+                     <image src="{{ Image }}" class="img-id img-responsive">
                      <div class="des">
-                           <h5>Book Title : {{Title}}</h5> 
+                           <h5 class="style-h5" >{{Title}}</h5> 
                            <div class="stat">
                              <p >{{ Description }}
                                 </p>
                             </div>
                       </div>
-                      <hr class="noMargin"> 
-                      <div class="row"><button class="col-xs-offset-4 btn" data-bookid="{{ ID }}">See More</button>
+                      <hr class="no-margin"> 
+                      <div class="row"><button class="col-xs-offset-4" id="btn" data-bookid="{{ ID }}">See More</button>
                       </div>
                   </div>
         </script>
-       
+       <script>
+         var content= new container();
+         content.initialize();
+        
+      </script>
       
  			
  			
