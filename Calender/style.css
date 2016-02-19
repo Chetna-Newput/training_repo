@@ -1,0 +1,57 @@
+.content {
+  border : 2px solid black;
+  height : 80%;
+  width : 80%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.birth {
+ background-color: aqua;
+}
+
+
+.col-7 {
+  float:left;
+  width: 14 %;
+}
+
+.date-cell {
+  width: 100%;
+  border: 1px solid black;
+
+}
+
+.style-date {
+  float: right;
+
+}
+
+.clear-right {
+  clear: right;
+}
+
+.pop-up {
+  
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 20px; 
+   width: 100%;
+  height: 100%; 
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+.pop-up-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+}
+
+  
+
+  
