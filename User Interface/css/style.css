@@ -27,15 +27,15 @@ div.logo-div span {
 
 .img-text {
   color: #fff;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 300;
   padding-right: 40px;
 }
 
 .content-div {
   width: 100%;
   height: 100%;
-   background-color: rgba(0,0,0,0.19);
+  background-color: rgba(0,0,0,0.19);
 }
 
 button.black-btn {
@@ -54,7 +54,7 @@ button.black-btn {
 }
 
 h1.img-text {
-  padding-top: 85px;
+  padding-top: 120px;
 }
 
 h5.img-text {
@@ -62,7 +62,7 @@ h5.img-text {
 }
 
 h2.flex-head {
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -79,6 +79,10 @@ h2.flex-head {
   border-top-left-radius: 5px;
   height : 650px;
   width: 98%;
+}
+
+.flex-head {
+  margin-top: 40px;
 }
 
 .highlighted {
@@ -165,6 +169,7 @@ div.flex-blue image {
 
 .left {
   float: left;
+  width: 200px;
 }
 
 .right {
@@ -196,7 +201,6 @@ div.small-line p span {
 
 div.used-by ul {
   color: #898989;
-  list-style: none;
 }
 
 div.used-by ul li {
@@ -209,7 +213,8 @@ div.div-get-dis h2 {
   margin-top: 60px;
   font-weight: 200;
   text-align: center;
-  color: #0000ff;
+  color: rgb(25,125,194);
+  font-size: 40px;
 }
 
 div.div-get-dis h4 {
@@ -223,15 +228,11 @@ p.col-md-10 {
   letter-spacing: 0.7;
 }
 
-div.col-md-5 ul {
-  list-style: none;
-}
 
 div.col-md-5 ul li{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 
 .listings {
   margin-left: auto;
@@ -252,4 +253,114 @@ div.col-md-6 image {
   text-align: center;
 }
 
+ul li {
+  list-style: none;
+}
+
+div.flex ul li:before {    
+ font-family: 'FontAwesome';
+ content: '\f00c';
+ margin:0 5px 0 -18px;
+ color: rgb(25,125,194);
+}
+
+div.highlighted ul li:before {    
+ font-family: 'FontAwesome';
+ content: '\f00c';
+ margin:0 5px 0 -18px;
+ color: rgb(247,147,33);
+}
+
+div.flex-blue image {
+  position: relative;
+  left:50px;
+}
+
+.txt-align {
+  text-align: center;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ababab;
+}
+
+.border-right {
+  border-right: 1px solid #ababab;
+}
+
+.assign-padding {
+  padding: 30px;
+}
+
+.blue-striped {
+  background-image: url("../img/blue-strip-bg.png");
+  height: 1050px;
+}
+
+.superhero-logo {
+  position: absolute;
+  left: 1055px;
+}
+
+.image-box {
+  position: relative;
+  top: 50px;
+  left: 280px;
+}
+
+.provide-size {
+  height: 60px;
+  width: 60px;
+  border: 3px solid #ababab;
+  margin: 15px;
+}
+
+.form-box {
+  background-image: url("../img/form-bg.jpg");
+  
+}
+
+.after-image h5,h6 {
+  text-align: center;
+  margin top: 30px;
+}
+
+.form-white-box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background: #fff;
+  height: 600px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+div.form-box h2 {
+  color: #fff;
+  font-weight: 200;
+  text-align: center;
+}
+
+div.form-box h4 {
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+.orange-star {
+  color: #ffa500;
+  padding-left: 3px;
+  align: center;
+}
+
+.star-div {
+  width: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p.blue-color {
+  color: #31A4E2; 
+}
 
