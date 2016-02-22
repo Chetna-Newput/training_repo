@@ -9,22 +9,21 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-       <script src="calenderFunctions.js"></script> 
+       <script src="Updated.js"></script> 
        <script type="text/javascript" src="mustache.js" ></script>
-      
-      
-    </head>
-     <body ><div class="pop-up">
-                <div class="pop-up-content">
-                  <h2 class="show"></h2>'s Birthday
-                  
+     </head>
+     <body >
+       <div class="pop-up">
+         <div class="pop-up-content">
+           <span class="close">×</span>
+           <h2 class="show"></h2>
          </div>
        </div>
-       <div class="container-fluid">
+       <div class="container-fluid box">
          <div class="content">
             <div class="header">
-               Birthday Calender: 2016
-           </div>
+              <span>Calender:</span><span class="year"></span> 
+            </div>
             <div class="body">
                <div class="row">
                  <div class="col-xs-2 side-bar">
@@ -32,25 +31,22 @@
                  </div>
                  <div class="col-xs-8">
                     <div class="row month">
-                        
                     </div>
                     <div class="col-7 cn0">
-                       
                     </div>
                     <div class="col-7 cn1">
-                      
                     </div>
                     <div class="col-7 cn2">
-                     </div>
+                    </div>
                     <div class="col-7 cn3">
                     </div>
                     <div class="col-7 cn4">
                     </div>
-                   <div class="col-7 cn5">
+                    <div class="col-7 cn5">
                     </div>
-                   <div class="col-7 cn6">
+                    <div class="col-7 cn6">
                     </div>
-                   <div class="col-7 cn7">
+                    <div class="col-7 cn7">
                     </div>
                  </div>
                  <div class="col-xs-2 side-bar">
@@ -62,47 +58,26 @@
        </div>     
        
        <script id="template" type="x-tmpl-mustache">
-               
-                
-         <div class="date-cell">
-                     
-                     
-                      <h5 class="style-date" >{{Date}}</h5> 
-                           
-                      
-                      <hr class="no-margin"> 
-                      <div class="clear-right"></div>
-                  </div>
-        </script>
-        <script id="template-birth" type="x-tmpl-mustache">
-               
-                
-         <div class="date-cell birth" id={{}}>
-                     
-                     
-                      <h5 class="style-date" >{{Date}}</h5> 
-                           
-                      
-                      <hr class="no-margin"> 
-                      <div class="clear-right"></div>
-                  </div>
-        </script>
-       
-         <script id="template-month" type="x-tmpl-mustache">
-               
-                
-         <div> 
-            <h2 >{{Date}}</h> 
+          <div class="date-cell">
+             <h2 class="style-date" >{{Date}}</h2> 
           </div>
         </script>
-       
-        <script>
-         var content= new container();
-         content.initialize();
-        
+        <script id="template-birth" type="x-tmpl-mustache">
+         <div class="date-cell birth" birth-id={{Date}}>
+             <h2 class="style-date" >{{Date}}</h2> 
+         </div>
         </script>
-      
- 			
- 			
+        <script id="template-today" type="x-tmpl-mustache">
+         <div class="date-cell today">
+             <h2 class="style-date" >{{Date}}</h2> 
+         </div>
+        </script>
+        <script id="template-month" type="x-tmpl-mustache">
+            <span >{{Date}}</span> 
+        </script>
+        <script>
+          var content= new container();
+          content.initialize();
+        </script>
       </body>
     </html>    

@@ -22,29 +22,20 @@ function container(){
                 {Name : "Shashank", Day : 11, Month : 11, year : 1990},
                 {Name : "Satya Narayan", Day : 12, Month : 11, year : 1983},
                {Name : "Nitesh", Day : 12, Month : 11, year : 1990}];
-       
-        
-  
-  
-  this.initialize = function() {
     
+  this.initialize = function() {
     ptrDay=setDay(2016,0,1);
-     printMonth();
+    printMonth();
     template = $("#template").html();
     Mustache.parse(template);
-    
     this.printCalender();
     this.bindEvents();
-    
   }
-  
   
   function setData(day) {
     data= { Date : day,
             Month : ptrMonth};
-  
   }
-  
   
   function printMonth(){
     var month=["January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -54,7 +45,6 @@ function container(){
     var cell = Mustache.render(templateMon,data);
     $(".month").html(cell);
   }
-  
   
   this.printCalender = function () {
      var cellArr=["","","","","","",""], rem, i;
@@ -78,21 +68,14 @@ function container(){
                    Mustache.parse(templateBirth);
                    $(".show").text(birthday[j].Name); 
                  cell = Mustache.render(templateBirth,data);
-              
               }
-            
             cellArr[ptrDay]= cellArr[ptrDay].concat(cell);
             ptrDay++;
             ptrDay= (ptrDay%7);
         }
-         
      for(i=0 ; i< 7; i++)
        $(".cn"+i).html(cellArr[i]);
-   
-    
-    
-  
-    function addDaysHeader(){
+   function addDaysHeader(){
       var days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
       for(var i=0; i<7; i++)
       {  setData(days[i]);
@@ -102,46 +85,41 @@ function container(){
       }; 
   
   };
-    
-
-
-
   
   this.bindEvents= function() {
-  
-  
-  $('body').on("click", "#next", function(){
-       ptrMonth++;
-       ptrDay=setDay(2016, ptrMonth, 1);
-       printMonth();
-       content.printCalender();
+   $('body').on("click", "#next", function(){
+      if(ptrMonth!=12) 
+       {ptrMonth++;
+        ptrDay=setDay(2016, ptrMonth, 1);
+        printMonth();
+        content.printCalender();
+       }
   });
-    
   $('body').on("click", "#previous", function(){
-       ptrMonth--;
-       ptrDay= setDay(2016, ptrMonth, 1);
-       printMonth();
-       content.printCalender();
        
+       if(ptrMonth!=1)
+        {ptrMonth--;
+         ptrDay= setDay(2016, ptrMonth, 1);
+         printMonth();
+         content.printCalender();
+        }
   });
-    
   $('body').on("mouseover",".birth", function() {
       
       $(".pop-up").show();
   });  
-    
   $(window).click(function(event) {
   
        $(".pop-up").hide();
-   
   });    
-    
   }
   
   function setDay(year, month, day){
     var d = new Date(year, month, day);
     return d.getDay();
   };
+  
+  function currentMonthDays()
   
 };
 
