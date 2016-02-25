@@ -1,0 +1,15 @@
+.carousel {
+  width: 80%;
+  margin-left : 0;
+  margin-top: 100px;
+  height : 70%; 
+}
+
+img {
+  height: 500px;
+  width: 750px;
+  display: none;
+  margin-left : 0;
+  position: relative;
+  overflow: hidden;
+}
