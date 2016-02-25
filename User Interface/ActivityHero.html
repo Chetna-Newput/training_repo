@@ -8,6 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="js/form-validations.js"></script>
      </head>
      <body>
          <div class="container-fluid header">
@@ -20,7 +22,7 @@
                    <div class="bottom-header">
                      <h1 class="img-text">The easier way to run and grow your bussiness.</h1>
                      <h5 class="img-text">Easy for parents. Easy for you.</h5><br>
-                     <button class=" col-xs-3 btn btn-warning ">Get Started</button>                              <button class="col-xs-3 btn  black-btn">Watch the video (1:22)</button> 
+                     <button class=" col-xs-3 btn orange-btn">Get Started</button>                              <button class="col-xs-3 btn black-btn">Watch the video (1:22)</button> 
                    </div>
                   </div>
                 </div>
@@ -29,21 +31,17 @@
                   <div class="row">
                     <div class="col-sm-4 ">
                       <div class="flex">
-                        
                         <h2>Get Discovered </h2>
                         <ul>
                           <li>Profile on ActivityHero, including your contact info &amp; links to your website </li>
                         </ul>
                         <a>Learn more..</a>
-                        
                       </div>
                       <div class="flex-blue">
                         <h2>Free Listing</h2>
                         <h3>It's free to get started!</h3>
-                        <image src="img/1.jpg"></image><br><br>
-                        <div class="row">
-                          <button class="col-xs-offset-3 col-xs-6 btn btn-warning ">Get Started</button>
-                        </div>
+                        <image src="img/1.jpg"></image>
+                        <button class="btn orange-btn ">Get Started</button>
                       </div>  
                     </div> 
                     <div class="col-sm-4">
@@ -61,12 +59,12 @@
                       </div>
                       <div class="flex-blue">
                         <h2>MarketingHero</h2>
-                        <h3>Grow your business</h3><br>
+                        <h3>Grow your business</h3>
                         <div class="details">
                           <div class="left">
                             Annual fee
                           </div>
-                          <div class="right">
+                          <div class="right align-digits">
                             $49
                           </div>
                           <div class="clear"></div>
@@ -87,13 +85,11 @@
                           </div>
                           <div class="clear"></div>
                         </div>
-                        <div><br>
-                          <p class="blue-color"><sup>*</sup> 2.5% Credit card processing fee<br>
-                            <sup>**</sup> Volume discounts available</p>
-                            </div> <br>  
-                        <div class="row">
-                          <button class="col-md-offset-3 col-md-6 btn btn-warning ">Get Started</button>
-                        </div>
+                        <div>
+                          <p class="blue-color"><sup>*</sup> + 2.5% credit card processing fee<br>
+                            <sup>**</sup> volume discounts available</p>
+                        </div> 
+                        <button class="btn orange-btn ">Get Started</button>
                       </div>
                     </div> 
                     <div class="col-sm-4">
@@ -116,12 +112,12 @@
                       </div>
                       <div class="flex-blue flex-blue-highlighted">
                         <h2>SuperHero</h2>
-                        <h3>Run your business</h3><br>
+                        <h3>Run your business</h3>
                         <div class="details">
                           <div class="left">
                             Annual fee
                           </div>
-                          <div class="right">
+                          <div class="right align-digits">
                             $49
                           </div>
                           <div class="clear"></div>
@@ -142,13 +138,11 @@
                           </div>
                           <div class="clear"></div>
                         </div>
-                        <div><br>
-                          <p class="blue-color"><sup>*</sup> 2.5% Credit card processing fee<br>
-                            <sup>**</sup> Volume discounts available</p>
-                            </div> <br>                         
-                        <div class="row">
-                          <button class="col-md-offset-3 col-md-6 btn btn-warning ">Get Started</button>
-                        </div>
+                        <div>
+                          <p class="blue-color"><sup>*</sup> + 2.5% credit card processing fee<br>
+                            <sup>**</sup> volume discounts available</p>
+                         </div>                         
+                         <button class="btn orange-btn">Get Started</button>
                       </div>
                             </div> <div class="clear"></div>
                     <div class="row small-line">
@@ -156,6 +150,9 @@
                     </div>
                   </div>
                   <div class="used-by">
+                    <div class="used-by-header">
+                      <h4>Used by businesses including</h4>
+                    </div>
                     <hr>
                     <ul>
                       <li><image src="img/school-of-rock.png"></image></li>
@@ -173,7 +170,12 @@
                 <div class="div-get-dis">
                   <h2>Get Discovered</h2>
                   <div class="star-div">
-                    <i class="fa fa-star orange-star"></i>
+                    <hr>
+                    <div class="set-position">
+                      <div class="stars">
+                        <i class="fa fa-star orange-star"></i>  
+                      </div>
+                    </div>
                   </div>
                   <h4>Free Listing</h4>
                   <div class="small-div">
@@ -182,7 +184,7 @@
                   <div class="listings">
                     <div class="row">
                       <div class="col-md-5">
-                        <image src="img/computer-placeholder.png"></image>
+                        <image src="img/tv.png"></image>
                       </div>
                       
                       <div class="col-md-offset-2 col-md-5">
@@ -226,9 +228,8 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="row">
-                        <button class="col-md-offset-4 col-md-4 btn btn-warning">Get started with Free Listing</button>
-                </div><br><br>
+                    <button class="btn orange-btn">Get started with Free Listing</button>
+                
                 <hr>    
                </div>
               </div>
@@ -240,7 +241,7 @@
                    <h4>MarketingHero</h4>
                    <div class="small-div">
                      <p>Ready to reach even more parents? Upgrade to a MarketingHero listing.</p>
-                     <p>You'll get everything that's part of the free listing, plus:</p>
+                     <span>You'll get everything that's part of the free listing, plus:</span>
                    </div>
                    <div class="listings">
                      <div class="row border-bottom">
@@ -275,21 +276,18 @@
                          <p class="txt-align">After the low annual fee, you only pay when a paid customer registers.</p>
                        </div>
                    </div><br><br>
-                   <div class="row">
-                        <button class="col-md-offset-4 col-md-4 btn btn-warning">Get started with ActivityHero</button>
-                </div> <br><br>  
+                   <button class="btn orange-btn">Get started with ActivityHero</button>
                 </div>        
                </div>
                <div class="blue-striped">
                  <image class="superhero-logo" src="img/superhero-tag.png"></image>
-                 <br>
-                  <div class="div-get-dis">
-                  <h2>Run your Business</h2>
-                  <div class="star-div">
-                    <i class="fa fa-star orange-star"></i>
-                  </div>  
-                   <h4>SuperHero</h4>
-                   <div class="small-div">
+                 <div class="div-get-dis">
+                    <h2>Run your Business</h2>
+                    <div class="star-div">
+                      <i class="fa fa-star orange-star"></i>
+                    </div>  
+                    <h4>SuperHero</h4>
+                    <div class="small-div">
                      <p>Take your business to the next level. Keep all the benefits of a MarketingHero listing on our webite. Add in SuperHero tools to help you manage your online schedule, registrations, payments on your own website, too.</p>   
                    </div>
                    <div class="listings">
@@ -339,40 +337,35 @@
                          <p class="txt-align">The SuperHero dashboard gives you detailed reports about registrations, payments, and more. You can also use it for common customer service tasks like editing customer info or changing sessions.</p>
                        </div>
                    </div><br>
-                   <div class="row">
-                     <button class="col-md-offset-5 col-md-2 btn btn-default">See all the benefits</button>
-                   </div><br>
-                   <div class="row">
-                        <button class="col-md-offset-4 col-md-4 btn btn-warning">Get started with SuperHero</button>
-                </div> 
-                     <div class="image-box">
+                   <button class="btn white-btn">See all the benefits</button>
+                   <button class="btn orange-btn">Get started with SuperHero</button>
+                 </div> 
+                
+                 </div><div class="clear"></div>
+                 <br>
+                    
+              </div>
+              <div class="after-image">
+                  <div class="image-box">
                        <image class="img-circle provide-size" src="img/artbash_360.jpg"> </image>  
                        <image class="img-circle provide-size" src="img/adventurecamps_360.jpg"> </image>
                        <image class="img-circle provide-size" src="img/spartanallstars_360.jpg"> </image>
                        <image class="img-circle provide-size" src="img/techrocks_360.jpg"> </image>
-                     </div>
-                  </div> 
-                
-                 </div><div class="clear"></div>
-                 <br>
-                <div class="after-image"><br><br>
-                  <h5>Tamar Hill</h5>
-                  <h6>Spartan Allstars</h6>
-                       <p class="txt-align">"ActivityHera allows allows us to customize to fit our needs, and they are very responisive. And best of all, our camp grew by over 40 percent this year."</p> 
-                  <div class="row">
-                    <button class="col-sm-offset-5 btn"> Hear from our clients</button>
+                    </div>
+                    <h5>Tamar Hill</h5>
+                    <h6 class="sub-head">Spartan Allstars</h6>
+                    <p class="txt-align quote-box">"ActivityHera allows allows us to customize to fit our needs, and they are very responisive. And best of all, our camp grew by over 40 percent this year."</p> 
+                    <button class="btn white-btn blue-btn"><i class="fa fa-play-circle-o"></i> Hear from our clients</button>
+              </div>            
+              <div class="form-box">
+                <div class="overlay">
+                  <div> 
+                    <h2>Use ActivityHero for your business</h2>
+                    <h4>Ready to grow and run your business? Let's get started</h4>
                   </div>
-              </div>      
-              </div><br><br><br><br><br>
-              <br><br><br><br><br>          
-              <div class="form-box"><br><br>
-                <div> 
-                  <h2>Use ActivityHero for your business</h2>
-                  <h4>Ready to grow and run your business? Let's get started</h4>
-                </div><br>
-                <div class="form-white-box">
-                 <form>
-                  <div class="row">
+                  <div class="form-white-box">
+                   <form name="Form1" >
+                   <div class="row">
                     <div class="col-md-12">
                       <p class="p1">I'm interested In <sup>*</sup></p>   
                     </div>
@@ -380,90 +373,99 @@
                   <div class="row"> 
                     <div class="col-md-3">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Free listing
+                        <input type="radio" name="inlineRadioOptions"  value="option1" class="inlineRadioOptions">Free listing
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">MarketingHero
+                        <input type="radio" name="inlineRadioOptions"  value="option2" class="inlineRadioOptions">MarketingHero
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">SuperHero
+                        <input type="radio" name="inlineRadioOptions"  value="option3" class="inlineRadioOptions">SuperHero
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">Not Sure
+                        <input type="radio" name="inlineRadioOptions"  value="option3" class="inlineRadioOptions">Not Sure
                       </label>
                     </div>
-                  </div>
+                  </div><br>
+                     <div class="show-error inlineRadioOptions-error"></div>  
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-group has-error">
+                      <div class="form-group">
                         <label for="inputEmail" class="">Email<sup>*</sup>
                         </label>
-                          <input type="email" class="form-control" name="fname" placeholder="" />
-                      </div>    
+                          <input type="text" class="form-control email" name="email" placeholder="" />
+                      </div> 
+                      <div class="show-error email-error"></div>  
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group has-error">
-                        <label for="inputPassword" class="">Password<sup>*</sup></label>
-                        <input type="pasword" class="form-control" name="mypass" placeholder="" />
-                      </div>   
+                      <div class="form-group">
+                        <label for="inputPassword">Password<sup>*</sup></label>
+                        <input type="pasword" class="form-control password" name="password" />
+                      </div> 
+                      <div class="show-error password-error"></div> 
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputfullname" class="">Fullname<sup>*</sup></label>
-                        <input type="text" class="form-control" name="fname" placeholder="" />
-                      </div>    
+                        <input type="text" class="form-control full-name" name="fullName" placeholder="" />
+                      </div> 
+                      <div class="show-error full-name-error"></div> 
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputbusiness" class="">BusinessName</label>
-                        <input type="text" class="form-control" name="bname" placeholder="" />
-                      </div>   
+                        <input type="text" class="form-control business-name" name="businessName" placeholder="" />
+                      </div> 
+                      <div class="show-error business-name-error"></div> 
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputWebsite" class="">Website</label>
-                        <input type="text" class="form-control" name="myWeb" placeholder="" />
-                      </div>    
+                        <input type="text" class="form-control website" name="website" placeholder="" />
+                      </div> 
+                      <div class="show-error website-error"></div> 
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputPhone" class="">Phone<sup>*</sup></label>
-                        <input type="text" class="form-control" name="myphone" placeholder="" />
-                      </div>   
+                        <input type="text" class="form-control phone" name="myPhone" placeholder="" />
+                      </div>
+                      <div class="show-error phone-error"></div> 
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
                         <label for="inputActivity" class="">Where does your activity takes place?</label>
-                        <input type="text" class="form-control" name="myActivity" placeholder="Street address,city,state,Zip code" />
-                      </div>    
+                        <input type="text" class="form-control activity" name="placeOfActivity" placeholder="Street address,city,state,Zip code" />
+                      </div>
+                      <div class="show-error activity-error"></div> 
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group">
                       <div class="col-md-6">
                         <label for="inputActivity" class="">Do you currently accept online registrations on your website?</label>
+                        <div class="show-error RadioOptions-error"></div> 
                       </div>
                     </div>
                     <div class="col-md-1">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+                        <input type="radio" name="RadioOptions" class="RadioOptions" value="option1">Yes
                       </label>
                     </div>
                     <div class="col-md-1">
                       <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option2">No
+                        <input type="radio" name="RadioOptions" class="RadioOptions" value="option2">No
                       </label>
                     </div>
                   </div>
@@ -474,14 +476,15 @@
                       </div>
                     </div>
                     <div class="col-md-7">
-                      <select class="form-control">
-                        <option></option>
-                        <option>100</option>
-                        <option>120</option>
-                        <option>140</option>
-                        <option>150</option>
+                      <select class="form-control noOfStudents" name="noOfStudents">
+                        <option value="default"></option>
+                        <option value="100">100</option>
+                        <option value="120">120</option>
+                        <option value="140">140</option>
+                        <option value="150">150</option>
                       </select>   
                     </div>
+                    <div class="show-error noOfStudents-error"></div> 
                   </div>
                   <div class="row">
                     <div class="col-md-5">
@@ -490,25 +493,29 @@
                       </div>
                     </div>
                     <div class="col-md-7">
-                      <select class="form-control">
-                        <option></option>
-                        <option>Newspaper</option>
-                        <option>Friends</option>
-                        <option>Internet</option>
-                        <option>Other</option>
+                      <select class="form-control source" name="howHear" >
+                        <option value="default"></option>
+                        <option value="Newpaper">Newspaper</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Internet">Internet</option>
+                        <option value="other">Other</option>
                       </select>   
                     </div>
+                    <div class="show-error source-error"></div> 
                   </div><br>
                   <div class="row"> 
                     <div class="col-md-offset-4 col-md-4 ">
-                      <button type="button" class="btn btn-warning btn-lg btn-block">Get Started</button>
+                      <button type="submit" id="submit" class="btn orange-btn btn-lg btn-block">Get Started</button>
                     </div> 
                   </div>
                  </form>
+                  </div>
+                 </div>
                 </div>
-                </div>
+                <div class="footer">
+	              <span><strong>Copyright © 2016 ActivityHero.
+	             </div>        
               </div>
-         </div>
          <script src="http://code.jquery.com/jquery.js"></script>
  		 <script src="js/bootstrap.min.js"></script>	
       </body>
