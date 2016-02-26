@@ -1,5 +1,11 @@
+$(function() {
+            $( ".birth-date" ).datepicker();
+         }); 
+
 $(document).ready( function() {
-   $('#submit').click(function(){
+  
+  
+  $('#submit').click(function(){
    return validate();
   });
 });

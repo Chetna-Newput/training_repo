@@ -8,8 +8,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="js/form-validations.js"></script>
+      
+      
      </head>
      <body>
          <div class="container-fluid header">
@@ -173,7 +175,7 @@
                     <hr>
                     <div class="set-position">
                       <div class="stars">
-                        <i class="fa fa-star orange-star"></i>  
+                        <i class="fa fa-star fa-lg orange-star"></i>  
                       </div>
                     </div>
                   </div>
@@ -236,7 +238,12 @@
               <div class="div-get-dis">
                   <h2>Grow your Business</h2>
                   <div class="star-div">
-                    <i class="fa fa-star orange-star"></i>
+                    <hr>
+                    <div class="set-position">
+                      <div class="stars">
+                        <i class="fa fa-star fa-lg orange-star"></i>  
+                      </div>
+                    </div>
                   </div>
                    <h4>MarketingHero</h4>
                    <div class="small-div">
@@ -284,8 +291,13 @@
                  <div class="div-get-dis">
                     <h2>Run your Business</h2>
                     <div class="star-div">
-                      <i class="fa fa-star orange-star"></i>
-                    </div>  
+                    <hr>
+                    <div class="set-position">
+                      <div class="stars">
+                        <i class="fa fa-star fa-lg orange-star"></i>  
+                      </div>
+                    </div>
+                  </div>  
                     <h4>SuperHero</h4>
                     <div class="small-div">
                      <p>Take your business to the next level. Keep all the benefits of a MarketingHero listing on our webite. Add in SuperHero tools to help you manage your online schedule, registrations, payments on your own website, too.</p>   
@@ -364,7 +376,7 @@
                     <h4>Ready to grow and run your business? Let's get started</h4>
                   </div>
                   <div class="form-white-box">
-                   <form name="Form1" >
+                   <form name="Form1" id="Form1" >
                    <div class="row">
                     <div class="col-md-12">
                       <p class="p1">I'm interested In <sup>*</sup></p>   
@@ -398,14 +410,14 @@
                       <div class="form-group">
                         <label for="inputEmail" class="">Email<sup>*</sup>
                         </label>
-                          <input type="text" class="form-control email" name="email" placeholder="" />
+                          <input type="email" class="form-control email" name="email" placeholder="" required/>
                       </div> 
                       <div class="show-error email-error"></div>  
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputPassword">Password<sup>*</sup></label>
-                        <input type="pasword" class="form-control password" name="password" />
+                        <input type="password" class="form-control password" name="password" required/>
                       </div> 
                       <div class="show-error password-error"></div> 
                     </div>
@@ -414,14 +426,14 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputfullname" class="">Fullname<sup>*</sup></label>
-                        <input type="text" class="form-control full-name" name="fullName" placeholder="" />
+                        <input type="text" class="form-control full-name" name="fullName" placeholder="" required/>
                       </div> 
                       <div class="show-error full-name-error"></div> 
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputbusiness" class="">BusinessName</label>
-                        <input type="text" class="form-control business-name" name="businessName" placeholder="" />
+                        <input type="text" class="form-control business-name" name="businessName" placeholder="" required/>
                       </div> 
                       <div class="show-error business-name-error"></div> 
                     </div>
@@ -430,14 +442,14 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputWebsite" class="">Website</label>
-                        <input type="text" class="form-control website" name="website" placeholder="" />
+                        <input type="url" class="form-control website" name="website" placeholder="" required/>
                       </div> 
                       <div class="show-error website-error"></div> 
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="inputPhone" class="">Phone<sup>*</sup></label>
-                        <input type="text" class="form-control phone" name="myPhone" placeholder="" />
+                        <input type="text" class="form-control phone" name="myPhone" placeholder="" required/>
                       </div>
                       <div class="show-error phone-error"></div> 
                     </div>
@@ -446,7 +458,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label for="inputActivity" class="">Where does your activity takes place?</label>
-                        <input type="text" class="form-control activity" name="placeOfActivity" placeholder="Street address,city,state,Zip code" />
+                        <input type="text" class="form-control activity" name="placeOfActivity" placeholder="Street address,city,state,Zip code" required/>
                       </div>
                       <div class="show-error activity-error"></div> 
                     </div>
@@ -502,7 +514,19 @@
                       </select>   
                     </div>
                     <div class="show-error source-error"></div> 
-                  </div><br>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="inputDate" class="">Enter you birth date</label>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <input class="form-control birth-date" name="birth-date" >
+                     </div>
+                    <div class="show-error birth-date-error"></div> 
+                  </div>   
+                     <br>
                   <div class="row"> 
                     <div class="col-md-offset-4 col-md-4 ">
                       <button type="submit" id="submit" class="btn orange-btn btn-lg btn-block">Get Started</button>
@@ -516,7 +540,10 @@
 	              <span><strong>Copyright © 2016 ActivityHero.
 	             </div>        
               </div>
-         <script src="http://code.jquery.com/jquery.js"></script>
- 		 <script src="js/bootstrap.min.js"></script>	
+        
+ 		  <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
+ 		  <script src="js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="js/form-validations.js"></script>        
       </body>
     </html>    
