@@ -1,9 +1,6 @@
-$(function() {
-            $( ".birth-date" ).datepicker();
-         }); 
 
 $(document).ready( function() {
-  
+  $( ".birth-date" ).datepicker();
   
   $('#submit').click(function(){
    return validate();

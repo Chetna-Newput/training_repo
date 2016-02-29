@@ -1,5 +1,29 @@
 $(document).ready(function() {
-  $( ".birth-date" ).datepicker();
+ $(".start-date").datepicker({
+       onSelect: function(selected) {
+          $(".end-date").datepicker("option","minDate", selected);
+        }
+    });
+    $(".end-date").datepicker({ 
+        onSelect: function(selected) {
+           $(".start-date").datepicker("option","maxDate", selected);
+        }
+    });  
+   
+   $(".placeOfActivity").geocomplete({
+          map: ".map-canvas",
+          details: "#Form1",
+          location: "India",
+          markerOptions: {
+            draggable: true
+          }
+    });
+  
+  $(".placeOfActivity").bind("geocode:dragged", function(event, latLng){
+          $("input[name=lat]").val(latLng.lat());
+          $("input[name=lng]").val(latLng.lng());
+        });
+  
   $("#Form1").validate({
      rules: {
        inlineRadioOptions : "required",
@@ -32,7 +56,8 @@ $(document).ready(function() {
        source : "required",
        RadioOptions : "required",
        noOfStudents : "required",
-       birthDate : "required"
+       startDate : "required",
+       endDate : "required"
     },
     messages: {
        email : {
@@ -59,6 +84,9 @@ $(document).ready(function() {
           
        },
        placeOfActivity : "Enter your place of Activity."
+    },
+    submitHandler: function(form) { 
+      console.log(form); 
     }
   });
 

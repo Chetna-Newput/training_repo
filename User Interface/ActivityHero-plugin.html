@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       
       
@@ -452,10 +453,126 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label for="inputActivity" class="">Where does your activity takes place?</label>
-                        <input type="text" class="form-control activity" name="placeOfActivity" placeholder="Street address,city,state,Zip code" />
+                        <input type="text" class="form-control placeOfActivity" name="placeOfActivity" placeholder="Street address,city,state,Zip code" />
                       </div>
                      </div>
+                     <div class="col-md-12">
+                       <div class="map-canvas"></div>
+                     </div>
                   </div>
+                  <fieldset>
+                  <h5>Address-Details</h5>
+                  <div class= "row">
+                    <div class="col-xs-6">
+                      <label>Name</label>
+                      <input name="name" class="right" type="text" value="">
+                    </div> 
+                    <div class="col-xs-6">
+                      <label>POI Name</label>
+                      <input name="point_of_interest" class="right"  type="text" value="">
+                     </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Latitude</label>
+                       <input name="lat" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Longitude</label>
+                        <input name="lng" type="text" class="right" value="">
+                       </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Location</label>
+                       <input name="location" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Location Type</label>
+                        <input name="location_type" type="text" class="right" value="">
+                      </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Address</label>
+                       <input name="formatted_address" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Bounds</label>
+                        <input name="bounds" type="text" class="right" value="">
+                      </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Viewport</label>
+                       <input name="viewport" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Route</label>
+                        <input name="route" type="text" class="right" value="">
+                      </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Street Number</label>
+                       <input name="street_number" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Postal Code</label>
+                        <input name="postal_code" type="text" class="right" value="">
+                      </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Locality</label>
+                       <input name="locality" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Sub Locality</label>
+                        <input name="sublocality" type="text" class="right" value="">
+                      </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>Country</label>
+                       <input name="country" type="text" class="right" value="">
+                      </div> 
+                      <div class="col-xs-6">
+                        <label>Country Code</label>
+                        <input name="country_short" type="text" class="right" value="">
+                       </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>State</label>
+                       <input name="administrative_area_level_1" type="text" class="right" value="">
+                     </div> 
+                     <div class="col-xs-6">
+                       <label>Place ID</label>
+                       <input name="place_id" type="text" class="right" value="">
+                       </div>
+                  </div>
+                   <div class= "row">
+                     <div class="col-xs-6">
+                       <label>ID</label>
+                       <input name="id" type="text" class="right" value="">
+                     </div> 
+                     <div class="col-xs-6">
+                       <label>Reference</label>
+                       <input name="reference" type="text" class="right" value="">
+                      </div>
+                     </div>
+                     <div class= "row">
+                       <div class="col-xs-6">
+                        <label>URL</label>
+                        <input name="url" type="text" class="right" value="">
+                       </div> 
+                       <div class="col-xs-6">
+                         <label>Website</label>
+                         <input name="website" type="text" class="right" value="">
+                        </div>
+                     </div>
+      </fieldset><br>   
                   <div class="row">
                     <div class="form-group">
                       <div class="col-md-6">
@@ -509,13 +626,23 @@
                   <div class="row">
                     <div class="col-md-5">
                       <div class="form-group">
-                        <label for="inputDate" class="">Enter you birth date</label>
+                        <label for="startDate" class="">Enter Start date</label>
                       </div>
                     </div>
                     <div class="col-md-7">
-                      <input class="form-control birth-date" name="birthDate" >
+                      <input class="form-control start-date" name="startDate" >
                      </div>
-                  </div>   
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="endDate" class="">Enter End date</label>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <input class="form-control end-date" name="endDate" >
+                     </div>
+                  </div>    
                      <br>
                   <div class="row"> 
                     <div class="col-md-offset-4 col-md-4 ">
@@ -530,10 +657,12 @@
 	              <span><strong>Copyright © 2016 ActivityHero.
 	             </div>        
               </div>
-        
+          
  		  <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
  		  <script src="js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="jquery.geocomplete.js"></script>
+        <script src="logger.js"></script>          
         <script src="js/plugin-form-validations.js"></script>        
       </body>
     </html>    

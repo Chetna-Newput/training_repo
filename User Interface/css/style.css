@@ -355,7 +355,6 @@ div.flex-blue image {
 
 .form-box {
   background-image: url("../img/form-bg.jpg");
-  height: 1000px;
 }
 
 .quote-box {
@@ -376,7 +375,7 @@ div.flex-blue image {
   margin-right: auto;
   width: 50%;
   background: #fff;
-  height: 850px;
+  margin-bottom: 30px;
   border-radius: 5px;
   padding: 50px;
 }
@@ -468,8 +467,7 @@ div.container-fluid button.blue-btn {
 
 div.overlay {
   background-color: rgba(0,0,0,0.2);
-  height: 1000px;
-}
+ }
 
 div.form-box label {
   font-weight: 400;
@@ -484,4 +482,9 @@ div.show-error {
 
 label.error {
   color: red;
+}
+
+.map-canvas {
+  height: 200px;
+  width: 100%;
 }
