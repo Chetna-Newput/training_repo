@@ -1,0 +1,20 @@
+<div class="menu">
+  <h1>Listing articles</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Type</th>
+    </tr>
+    <% @engineers.each do |engineer| %>
+      <tr>
+        <td><%= engineer.name %></td>
+        <td><%= engineer.age %></td>
+        <td><%= engineer.role %></td>
+        <td><%= link_to 'Show', engineer_path(engineer) %></td>
+        <td><%= link_to 'Edit', edit_engineer_path(engineer) %></td>
+        <td><%= link_to 'Delete', delete_engineer_path(engineer), method: :delete %> </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
