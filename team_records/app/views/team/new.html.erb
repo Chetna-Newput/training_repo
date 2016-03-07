@@ -1,0 +1,29 @@
+<div class="menu">
+  <%= form_for :team, url: create_new_team_path  do |f| %>
+  <% if @team.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@team.errors.count, "error") %> prohibited
+          this record from being saved:
+        </h2>
+        <ul>
+          <% @team.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <p>
+      <%= f.label :team_name %><br>
+      <%= f.text_field :team_name %>
+    </p>
+    <p>
+      <%= f.label :team_id %><br>
+      <%= f.text_area :team_id %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>

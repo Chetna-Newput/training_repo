@@ -1,0 +1,18 @@
+<div class="menu">
+  <h1>Listing Teams</h1>
+  <table>
+    <tr>
+      <th>Team Name</th>
+      <th>Team Id</th>
+    </tr>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.team_name %></td>
+        <td><%= team.team_id %></td>
+        <td><%= link_to 'Show', team_path(team)  %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Delete', delete_team_path(team), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
