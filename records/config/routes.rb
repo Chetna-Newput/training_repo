@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
  
-  root 'engineers#home'
-  get '/employees/new', to: 'engineers#new', as: 'new_engineer'
-  post '/employees/create', to: 'engineers#create', as: 'create_new_engineer'
-  get '/employees/all', to: 'engineers#index', as: 'engineers'
-  get '/employee/:id', to: 'engineers#show', as: 'engineer'
-  get '/employee/:id/edit', to: 'engineers#edit', as: 'edit_engineer'
-  post '/employee/:id/update', to: 'engineers#update', as: 'update_engineer'
-  delete '/employee/:id/delete', to: 'engineers#destroy', as: 'delete_engineer'
-  get '/employees/all/developers', to: 'engineers#developers', as: 'developers'
-  get '/employee/developer/:id/edit', to: 'engineers#editDevelopers', as: 'edit_developers'
+  root 'users#home'
   
+  get '/users/new', to: 'users#new', as: 'new_user'
+  post '/users/create', to: 'users#create', as: 'create_new_user'
+  get '/users/all', to: 'users#index', as: 'users'
+  get '/user/:id', to: 'users#show', as: 'user'
+  get '/user/:id/edit', to: 'users#edit', as: 'edit_user'
+  post '/user/:id/update', to: 'users#update', as: 'update_user'
+  delete '/user/:id/delete', to: 'users#destroy', as: 'delete_user'
+  get '/users/all/developers', to: 'users#developers', as: 'developers'
+  get '/user/developer/:id/edit', to: 'users#editDevelopers', as: 'edit_developers'
+  
+  get '/articles', to: 'articles#index', as: 'articles'
+  post '/articles', to: 'articles#create'
+  get '/articles/new', to: 'articles#new', as: 'new_article'
+  get '/articles/:id/edit', to: 'articles#edit', as: 'edit_article'
+  get '/articles/:id', to: 'articles#show', as: 'article'
+  patch  '/articles/:id', to: 'articles#update'
+  delete '/articles/:id', to: 'articles#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
