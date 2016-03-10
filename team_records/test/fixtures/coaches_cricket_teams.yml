@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach_id: 1
+  cricket_team_id: MyString
+  : 1
+  working_for: 1
+
+two:
+  coach_id: 1
+  cricket_team_id: MyString
+  : 1
+  working_for: 1

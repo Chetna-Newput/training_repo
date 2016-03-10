@@ -1,9 +1,13 @@
-<p>
-  <strong>Team Name:</strong>
-  <%= @team.team_name %>
-</p>
-<p>
-  <strong>Team ID:</strong>
-  <%= @team.team_id %>
-</p>
-
+<%= render "header" %>
+<div class="row">
+  <div class="col-sm-3">
+    <%= render "sidepanel" %>
+  </div>
+  <div class="col-sm-9">
+    <div class="page-header"><h2>Showing Team Details</h2></div>
+    <p>
+      <strong>Team Name:</strong>
+      <%= @team.team_name %>
+    </p>
+  </div>
+</div>

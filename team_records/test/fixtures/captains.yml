@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  captain_name: MyString
+  cricket_team_id: 1
+  speciality: MyString
+
+two:
+  captain_name: MyString
+  cricket_team_id: 1
+  speciality: MyString

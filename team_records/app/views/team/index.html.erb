@@ -1,18 +1,24 @@
-<div class="menu">
-  <h1>Listing Teams</h1>
-  <table>
-    <tr>
-      <th>Team Name</th>
-      <th>Team Id</th>
-    </tr>
-    <% @teams.each do |team| %>
+<%= render "header" %>
+<div class="row">
+  <div class="col-sm-3">
+    <%= render "sidepanel" %>
+  </div>
+  <div class="col-sm-9">
+    <div class="page-header"><h2>Listing Teams</h2></div>
+    <table class="table">
       <tr>
-        <td><%= team.team_name %></td>
-        <td><%= team.team_id %></td>
-        <td><%= link_to 'Show', team_path(team)  %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Delete', delete_team_path(team), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Team Name</th>
+        <th colspan="4">Actions</th>
       </tr>
-    <% end %>
-  </table>
+      <% @teams.each do |team| %>
+        <tr>
+          <td><%= team.team_name %></td>
+          <td><%= link_to 'Show', team_path(team)  %></td>
+          <td><%= link_to 'Edit', edit_team_path(team) %></td>
+          <td><%= link_to 'Delete', delete_team_path(team), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show Team Players', team_players_list_path(team)  %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>

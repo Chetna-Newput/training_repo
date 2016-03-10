@@ -1,5 +1,5 @@
 class TeamController < ApplicationController
-    def home
+  def home
   end
   
   def index
@@ -37,17 +37,20 @@ class TeamController < ApplicationController
     end
   end
   
-
-  def destroy
+ def destroy
     @team = CricketTeam.find(params[:id])
     @team.destroy
     redirect_to teams_path
   end
   
+  def listPlayers
+    @team = CricketTeam.find(params[:id])
+    @players= @team.players
+  end
   
 private
   def team_params
-    params.require(:team).permit(:team_name, :team_id)
+    params.require(:team).permit(:team_name)
   end
 
 end

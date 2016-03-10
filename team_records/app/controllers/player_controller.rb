@@ -11,7 +11,7 @@ class PlayerController < ApplicationController
     @player = Player.new(player_params)
  
     if @player.save
-      redirect_to players_path
+      redirect_to team_players_list_path(@player.cricket_team_id)
     else
       render 'new'
     end
@@ -28,13 +28,12 @@ class PlayerController < ApplicationController
   def update
     @player = Player.find(params[:id])
     if @player.update(player_params)
-      redirect_to players_path
+      redirect_to team_players_list_path(@player.cricket_team_id)
     else
       render 'edit'
     end
   end
   
-
   def destroy
     @player = Player.find(params[:id])
     @player.destroy
@@ -43,6 +42,6 @@ class PlayerController < ApplicationController
  
   private
   def player_params
-    params.require(:player).permit(:player_id, :player_name, :player_age, :player_email, :player_email_confirmation, :cricket_team_id)
+    params.require(:player).permit(:player_name, :player_age, :player_email, :player_email_confirmation, :cricket_team_id)
   end
 end

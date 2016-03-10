@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   patch  '/players/:id', to: 'player#update'
   delete '/players/:id', to: 'player#destroy', as: 'delete_player'
   
-  get '/teams', to: 'team_players#listTeams', as: 'team_players'
-  get '/team/:id/players', to: 'team_players#listPlayers', as: 'team_players_list'
+ 
+  get '/team/:id/players', to: 'team#listPlayers', as: 'team_players_list'
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

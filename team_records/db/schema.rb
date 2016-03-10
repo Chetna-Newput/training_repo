@@ -11,26 +11,75 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307093805) do
+ActiveRecord::Schema.define(version: 20160309041754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "captains", force: :cascade do |t|
+    t.string   "captain_name"
+    t.integer  "cricket_team_id"
+    t.string   "speciality"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "coaches", force: :cascade do |t|
+    t.string   "coach_name"
+    t.string   "nationality"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "coaches_cricket_team_id"
+  end
+
+  create_table "coaches_cricket_teams", force: :cascade do |t|
+    t.integer  "cricket_team_id"
+    t.integer  "working_for"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "cricket_teams", force: :cascade do |t|
     t.string   "team_name"
-    t.string   "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "cricket_teams_tournaments", force: :cascade do |t|
+    t.integer  "cricket_team_id"
+    t.integer  "tournament_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "ipl_histories", force: :cascade do |t|
+    t.integer  "ipl_team_id"
+    t.integer  "player_id"
+    t.integer  "year"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "ipl_teams", force: :cascade do |t|
+    t.string   "ipl_team_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "players", force: :cascade do |t|
-    t.string   "player_id"
     t.string   "player_name"
     t.integer  "player_age"
     t.string   "player_email"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "cricket_team_id"
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string   "t_name"
+    t.string   "place"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

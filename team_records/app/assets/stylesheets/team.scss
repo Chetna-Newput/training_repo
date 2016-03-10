@@ -1,3 +1,16 @@
+div.header {
+  height: 170px;
+  width: 100%;
+  background: url('cricket.png');
+  background-size: 100% 100%;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.2);
+  height: 100%;
+  width: 100%;
+}
+
 .left {
   float: left;
   padding-left: 20%;
@@ -10,7 +23,11 @@
 }
 
 h1 {
+  color: #fff;
   text-align: center;
+  padding-top: 50px;
+  margin-top: 0;
+  font-size: 40px;
 }
 
 ul {
@@ -39,4 +56,16 @@ ul li{
 table td {
   padding: 15px;
   font-size: 20px;
+}
+
+table {
+  text-align: left;
+}
+
+div.col-sm-9 {
+  text-align: center;
+}
+
+.col-sm-3 h2 {
+  text-align: center;
 }

@@ -1,6 +1,8 @@
 class Player < ActiveRecord::Base
   belongs_to :cricket_team
-  validates :player_name, presence: true,
+  has_many :ipl_histories
+  has_many :ipl_teams, :through => :ipl_histories
+  validates :player_name,format: { with: /\A[A-Za-z ]+\z/ }, presence: true,
     length: {minimum: 5}
   
   validates :player_age,
