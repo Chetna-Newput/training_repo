@@ -14,7 +14,7 @@ class TeamController < ApplicationController
     @team = CricketTeam.new(team_params)
  
     if @team.save
-      redirect_to teams_path
+      redirect_to cricket_teams_path
     else
       render 'new'
     end
@@ -31,7 +31,7 @@ class TeamController < ApplicationController
   def update
     @team = CricketTeam.find(params[:id])
     if @team.update(team_params)
-      redirect_to teams_path
+      redirect_to cricket_teams_path
     else
       render 'edit'
     end
@@ -40,7 +40,7 @@ class TeamController < ApplicationController
  def destroy
     @team = CricketTeam.find(params[:id])
     @team.destroy
-    redirect_to teams_path
+    redirect_to cricket_teams_path
   end
   
   def listPlayers
@@ -50,7 +50,7 @@ class TeamController < ApplicationController
   
 private
   def team_params
-    params.require(:team).permit(:team_name)
+    params.require(:cricket_team).permit(:team_name)
   end
 
 end

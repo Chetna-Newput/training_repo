@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render "team/header" %>
+  <div class="row">
+    <div class="col-sm-3">
+      <%= render "team/sidepanel" %>
+    </div>
+    <div class="col-sm-9">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

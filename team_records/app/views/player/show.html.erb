@@ -1,23 +1,16 @@
-<%= render "team/header" %>
-<div class="row">
-  <div class="col-sm-3">
-    <%= render "team/sidepanel" %>
-  </div>
-  <div class="col-sm-9">
-    <div class="page-header"><h2>Showing Player Details</h2></div>
-    <p>
-      <strong>Name:</strong>
-      <%= @player.player_name %>
-    </p>
-    <p>
-      <strong>Age:</strong>
-      <%= @player.player_age %>
-    </p>
-    <p>
-      <strong>Email:</strong>
-      <%= @player.player_email %>
-    </p>
-    <%= link_to 'Edit', edit_player_path(@player) %>
-    <%= link_to 'Back', players_path %>
-  </div>
-</div>
+<div class="page-header"><h2>Showing Player Details</h2></div>
+<p>
+  <strong>Name:</strong>
+  <%= @player.player_name %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @player.player_age %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @player.player_email %>
+</p>
+<%= link_to 'Edit', edit_player_path(@player) %>
+<%= link_to 'Back', players_path %>
+ 

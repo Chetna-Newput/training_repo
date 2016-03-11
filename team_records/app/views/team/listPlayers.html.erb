@@ -1,28 +1,21 @@
-<%= render "header" %>
-<div class="row">
-  <div class="col-sm-3">
-    <%= render "sidepanel" %>
-  </div>
-  <div class="col-sm-9">
-    <div class="page-header"><h2>Listing Players For team </h2></div>
-    <table class="table">
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
-        <th colspan="3"> Actions</th>
-      </tr>
-      <% @players.each do |player| %>
-        <tr>
-          <td><%= player.player_name %></td>
-          <td><%= player.player_age %></td>
-          <td><%= player.player_email %></td>
-          <td><%= link_to 'Show', player_path(player) %></td>
-          <td><%= link_to 'Edit', edit_player_path(player) %></td>
-          <td><%= link_to 'Delete', delete_player_path(player), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </table>
-    <div class="right"><%= link_to 'Add New Player', new_player_path %></div>
-    </div>
-</div>
+
+<div class="page-header"><h2>Listing Players For team </h2></div>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th colspan="3"> Actions</th>
+  </tr>
+  <% @players.each do |player| %>
+    <tr>
+      <td><%= player.player_name %></td>
+      <td><%= player.player_age %></td>
+      <td><%= player.player_email %></td>
+      <td><%= link_to 'Show', player_path(player) %></td>
+      <td><%= link_to 'Edit', edit_player_path(player) %></td>
+      <td><%= link_to 'Delete', delete_player_path(player), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="right"><%= link_to 'Add New Player', new_player_path %></div>
