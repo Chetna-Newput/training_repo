@@ -1,10 +1,21 @@
 class PlayerController < ApplicationController
+  protect_from_forgery except: [:index, :show]
   def index
     @players = Player.all
+    respond_to do |format|
+      format.html 
+      format.json { render :json => @players}
+      format.js 
+    end
   end
   
   def show
     @player = Player.find(params[:id])
+    respond_to do |format|
+      format.html 
+      format.json { render :json => @player}
+      format.js 
+    end
   end
   
   def create
@@ -28,8 +39,8 @@ class PlayerController < ApplicationController
   def update
     @player = Player.find(params[:id])
     if @player.update(player_params)
-      redirect_to team_players_list_path(@player.cricket_team_id)
-    else
+       redirect_to team_players_list_path(@player.cricket_team_id)
+     else
       render 'edit'
     end
   end
@@ -37,7 +48,7 @@ class PlayerController < ApplicationController
   def destroy
     @player = Player.find(params[:id])
     @player.destroy
-    redirect_to players_path
+    redirect_to action: 'index', status: 303
   end
  
   private

@@ -1,0 +1,6 @@
+<% if @team.errors.empty?  %>
+  $('.heading').empty();
+  $('.heading').append("<h2>Creating new Team</h2>");
+  $('.content').empty();
+  $('.content').append("<%=raw escape_javascript( render :template => 'team/new.html.erb') -%>");
+<% end %>

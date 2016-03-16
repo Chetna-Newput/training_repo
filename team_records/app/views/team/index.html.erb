@@ -8,10 +8,10 @@
   <% @teams.each do |team| %>
     <tr>
       <td><%= team.team_name %></td>
-      <td><%= link_to 'Show', cricket_team_path(team)  %></td>
-      <td><%= link_to 'Edit', edit_cricket_team_path(team) %></td>
-      <td><%= link_to 'Delete', delete_cricket_team_path(team), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <td><%= link_to 'Show Team Players', team_players_list_path(team)  %></td>
+      <td><%= link_to 'Show', cricket_team_path(team), remote: true   %></td>
+      <td><%= link_to 'Edit', edit_cricket_team_path(team), remote: true  %></td>
+      <td><%= link_to 'Delete', delete_cricket_team_path(team), method: :delete, data: { confirm: 'Are you sure?' }, remote: true  %></td>
+      <td><%= link_to 'Show Team Players', team_players_list_path(team), remote: true   %></td>
     </tr>
   <% end %>
 </table>

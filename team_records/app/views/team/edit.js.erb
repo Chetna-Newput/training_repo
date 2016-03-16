@@ -1,0 +1,5 @@
+<% if @team.errors.empty?  %>
+  $('.heading').empty();
+  $('.content').empty();
+  $('.content').append("<%=raw escape_javascript( render :template => 'team/edit.html.erb') -%>");
+<% end %>

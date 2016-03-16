@@ -14,9 +14,10 @@
       <td><%= player.player_age %></td>
       <td><%= player.player_email %></td>
       <td><%= teamname(player.cricket_team_id) %></td>
-      <td><%= link_to 'Show', player_path(player) %></td>
-      <td><%= link_to 'Edit', edit_player_path(player) %></td>
-      <td><%= link_to 'Delete', delete_player_path(player), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', player_path(player), remote: true %></td>
+      <td><%= link_to 'Edit', edit_player_path(player), remote: true %></td>
+      <td><%= link_to 'Delete', delete_player_path(player), method: :delete,
+               data: { confirm: 'Are you sure?' }, remote: true %></td>
     </tr>
   <% end %>
 </table>

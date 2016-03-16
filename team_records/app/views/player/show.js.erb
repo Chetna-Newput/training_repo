@@ -1,0 +1,3 @@
+$('.heading').empty();
+$('.content').empty();
+$('.content').append("<%=raw escape_javascript( render :template => 'player/show.html.erb') -%>");
